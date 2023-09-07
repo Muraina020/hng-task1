@@ -5,19 +5,35 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+.imageTitle{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  
 }
 
 img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
     margin-top: 10px;
     border-radius: 50%;
+}
+.subTitle{
+    border: 1px solid #7a7a7a;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 a {
@@ -27,4 +43,9 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+.myTrackContainer{
+    display: flex;
+    justify-content: space-between;
+
 }

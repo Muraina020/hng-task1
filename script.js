@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const dayOfTheWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
 
-    // Get the current date and time
-    const currentDate = new Date();
-    const dayOfTheWeek = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
-    const utcTime = currentDate.toISOString().split('T')[1].slice(0, 8);
+    // Get the current date and time in milliseconds since the Unix epoch
+    const currentTimeMillis = new Date().getTime();
+    const dayOfTheWeek = new Date(currentTimeMillis).toLocaleDateString('en-US', { weekday: 'long' });
+    const utcTime = currentTimeMillis;
 
     // Update the elements with the current data
-    slackNameElement.textContent = "Muraina Boluwatife"; // Replace with your actual Slack name
+    slackNameElement.textContent = "Muraina Boluwatife"; 
     dayOfTheWeekElement.textContent = dayOfTheWeek;
-    utcTimeElement.textContent = utcTime;
+    utcTimeElement.textContent = utcTime + " ms";
 });
